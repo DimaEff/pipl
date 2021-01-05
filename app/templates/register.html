@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <form method="post" action="">
+        {{ form.csrt_token }}
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}
+            {% for error in form.username.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.surname.label }}<br>
+            {{ form.surname(size=32) }}
+            {% for error in form.surname.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+            {% for error in form.email.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.birthday.label }}<br>
+            {{ form.birthday(class='datepicker') }}
+            {% for error in form.birthday.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p class="phone">
+            {{ form.phone.label }}<br>
+            {{ form.phone(class='phone') }}
+            {% for error in form.phone.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password1.label }}<br>
+            {{ form.password1(size=32) }}
+            {% for error in form.password1.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password2.label }}<br>
+            {{ form.password2(size=32) }}
+            {% for error in form.password2.errors %}
+                <p class="errors">[{{ error }}]</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+
+    {% block scripts %}
+
+    <script src="{{ url_for('static', filename='scripts/libs/jquery/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/libs/jquery_maskedinput/src/jquery.maskedinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/register.js') }}"></script>
+
+    {% endblock %}
+
+{% endblock %}

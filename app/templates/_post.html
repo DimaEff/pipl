@@ -1,0 +1,5 @@
+<p class="post">
+    {% for post in posts %}
+        {{ post.author.username }} says:{{ post.body }}
+    {% endfor %}
+</p>
