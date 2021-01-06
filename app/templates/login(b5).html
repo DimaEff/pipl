@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block app_content %}
+
+<div class="wrapper-l">
+  <div class="text-blur">pipl</div>
+  <div class="container form-container">
+    <form class="position-relative" method="post" action="">
+      {{ form.hidden_tag() }}
+      <div class="mb-3">
+        <input id="email_phone" name="email_phone" type="email" class="form-control rounded-pill fs-4 login-form" id="exampleInputEmail1" placeholder="your pipname">
+      </div>
+      <div class="mb-3">
+        <input id="password" name="password" type="password" class="form-control rounded-pill fs-4 login-form" id="exampleInputPassword1" placeholder="your password">
+      </div>
+      <div class="container btn-group rounded-pill group-login">
+        <!-- <a class="btn btn-primary active rounded-end rounded-pill fs-1 btn-login" aria-current="page">
+          <span>
+            pipin
+          </span>
+        </a> -->
+        <input id="submit" name="submit" type="submit" class="btn btn-primary active rounded-end rounded-pill fs-1 btn-login" value="pipin">
+        <a href="#" class="position-relative btn btn-primary active rounded-start rounded-pill btn-login" style="padding: 0%;">
+          <span class="plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

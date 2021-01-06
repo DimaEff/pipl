@@ -1,0 +1,137 @@
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+.wrapper-n {
+    position: relative;
+    overflow-x: hidden;
+}
+.my-navbar {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+}
+.menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    transition: 0.5s;
+    transform: translateX(100%);
+}
+.menu-active {
+    transform: translateX(0%);
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+/* .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -35px;
+    bottom: 10px;
+} */
+.icon {
+    color: black;
+    white-space: nowrap;
+    outline: none;
+}
+/* .icon:active {
+    color: blanchedalmond;
+}
+.icon[tabindex]:focus {
+    color: gray;
+    outline: none;
+}*/
+.btn-home {
+    font-size: x-large;
+}
+.icon-active {
+    color: gray;
+    outline: none;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+
+body { margin: 0; height: 100vh; }
+.wrapper-l {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font: bold 25vh sans-serif;
+    resize: both; overflow: hidden; /* Для интерактивного изменения размера. Необязательно */
+    background-image: url('../img/pipl.jpg');
+    background-size: auto 100%;
+}
+.form-container {
+    position: absolute;
+    height: 20vh;
+    width: 85%;
+}
+.login-form {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.login-form:active, .login-form:focus, a {
+    outline: none!important;
+    outline-color: none!important;
+    outline-width: none!important;
+    outline-style: none!important;
+    box-shadow: none!important;
+}
+.login-form::-moz-focus-inner, a {
+    border: none !important;
+}
+.text-blur {
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%; width: 100%;
+    margin-top: 5vh;
+    background: transparent;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.17);
+    -webkit-background-clip: text;
+    filter: blur(1.5px); /* Размытие текста */
+}
+form {
+    position: relative;
+}
+.group-login {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+.btn-login {
+    /* background-color:  rgba(255, 255, 255, 0.17); */
+    border-color: transparent;
+    -webkit-text-fill-color: gray;
+    /* backdrop-filter: blur(1.5px); */
+    text-align: center;
+}
+.plus {
+    display: flex;
+    margin-top: 10%;
+    color: gray;
+}

@@ -11,7 +11,7 @@ from app.models import User, Post
 def index():
     users = User.query.all()
 
-    return render_template('index.html', title='News', users=users)
+    return render_template('news(b5).html', title='news', users=users)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -30,7 +30,7 @@ def login():
         login_user(user, remember=form.remember_me.data)
         return redirect(url_for('index'))
 
-    return render_template('login.html', title='Login', form=form)
+    return render_template('login(b5).html', title='pipin', form=form)
 
 
 @app.route('/logout')
